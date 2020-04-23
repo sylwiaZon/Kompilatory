@@ -1,6 +1,6 @@
 public class Test {
     public static void main(String[] args) throws Exception {
-        String input = "REPEAT 4 [ FORWARD 100 LEFT 90 RIGHT 60 ] ";
+        String input = "IF 2 >=4";
         Scanner scanner = new Scanner(input);
         Token scan;
         do {

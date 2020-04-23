@@ -79,6 +79,39 @@ public class Scanner {
                 idx++;
                 return Token.RBRACKET;
             }
+            else if (ch == '=')
+            {
+                idx++;
+                return Token.EQUAL;
+            }
+            else if (ch == '!')
+            {
+                idx++;
+                return Token.NOT;
+            }
+            else if (ch == '>')
+            {
+                idx++;
+                ch = rawContents.charAt(idx);
+                if(ch == '='){
+                    idx++;
+                    return Token.GREATEREQ;
+                }
+                else{
+                    return Token.GREATER;
+                }
+            }
+            else if (ch == '<'){
+                idx++;
+                ch = rawContents.charAt(idx);
+                if(ch == '='){
+                    idx++;
+                    return Token.LESSEQ;
+                }
+                else{
+                    return Token.LESS;
+                }
+            }
             else if (Character.isDigit(ch))
             {
                 scanBuffer = "";

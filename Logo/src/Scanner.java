@@ -17,6 +17,53 @@ public class Scanner {
         reserved.put("NUMBER", Token.NUMBER);
         reserved.put("[", Token.LBRACKET);
         reserved.put("]", Token.RBRACKET);
+        reserved.put("HOME", Token.HOME);
+        reserved.put("POS", Token.POS);
+        reserved.put("XCOR", Token.XCOR);
+        reserved.put("YCOR", Token.YCOR);
+        reserved.put("HEADING", Token.HEADING);
+        reserved.put("SCRUNCH", Token.SCRUNCH);
+        reserved.put("SHOWTURTLE", Token.SHOWTURTLE);
+        reserved.put("HIDETURTLE", Token.HIDETURTLE);
+        reserved.put("CLEAN", Token.CLEAN);
+        reserved.put("CLEARSCREEN", Token.CLEARSCREEN);
+        reserved.put("WRAP", Token.WRAP);
+        reserved.put("WINDOW", Token.WINDOW);
+        reserved.put("PENCE", Token.PENCE);
+        reserved.put("FILL", Token.FILL);
+        reserved.put("SHOWNP", Token.SHOWNP);
+        reserved.put("PENDOWN", Token.PENDOWN);
+        reserved.put("PENUP", Token.PENUP);
+        reserved.put("PENPAINT", Token.PENPAINT);
+        reserved.put("PENERASE", Token.PENERASE);
+        reserved.put("PENREVERSE", Token.PENREVERSE);
+        reserved.put("SETX", Token.SETX);
+        reserved.put("SETY", Token.SETY);
+        reserved.put("SETHEADING", Token.SETHEADING);
+        reserved.put("LABEL", Token.LABEL);
+        reserved.put("SETLABELHEIGHT", Token.SETLABELHEIGHT);
+        reserved.put("SETPENCOLOR", Token.SETPENCOLOR);
+        reserved.put("SETPENSIZE", Token.SETPENSIZE);
+        reserved.put("SETBACKGROUND", Token.SETBACKGROUND);
+        reserved.put("SETXY", Token.SETXY);
+        reserved.put("ARC", Token.ARC);
+        reserved.put("SETSCRUNCH", Token.SETSCRUNCH);
+        reserved.put("SETPOS", Token.SETPOS);
+        reserved.put("TOWARDS", Token.TOWARDS);
+        reserved.put("FILLED", Token.FILLED);
+        reserved.put("FOREVER", Token.FOREVER);
+
+        reserved.put("TO", Token.TO);
+        reserved.put("END", Token.END);
+        reserved.put("IF", Token.IF);
+        reserved.put("WHILE", Token.WHILE);
+
+        reserved.put("=", Token.EQUAL);
+        reserved.put("!", Token.NOT);
+        reserved.put("<", Token.LESS);
+        reserved.put(">", Token.GREATER);
+        reserved.put("<=", Token.LESSEQ);
+        reserved.put(">=", Token.GREATEREQ);
     }
     public Token scan() throws Exception {
         while (idx < rawContents.length())

@@ -3,7 +3,7 @@ import java.util.HashMap;
 public class Scanner {
     HashMap<String, Token> reserved = new HashMap<>();
     private String rawContents;
-    private String scanBuffer;
+    public String scanBuffer;
     private int idx;
     private char ch;
     public Scanner(String input)
@@ -166,5 +166,11 @@ public class Scanner {
     }
     private void LexicalError() throws Exception {
         throw new Exception("Lexical error at '" + ch + "' (' " + scanBuffer + " ')");
+    }
+    public Token nextToken() throws Exception {
+        int oldIdx = idx;
+        Token result = scan();
+        idx = oldIdx;
+        return result;
     }
 }

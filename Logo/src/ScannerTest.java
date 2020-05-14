@@ -1,4 +1,4 @@
-public class Test {
+public class ScannerTest {
     public static void main(String[] args) throws Exception {
         String input = "IF 2 >=4";
         Scanner scanner = new Scanner(input);

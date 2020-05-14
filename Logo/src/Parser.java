@@ -98,7 +98,7 @@ public class Parser {
             case PENPAINT:
             case PENERASE:
             case PENREVERSE:
-                System.out.println("Argument free");
+                Match(nextToken);
                 break;
             case FORWARD:
             case BACK:
@@ -120,8 +120,6 @@ public class Parser {
             case SETSCRUNCH:
                 Match(nextToken);
                 Match(Token.NUMBER);
-                nextToken = scanner.nextToken();
-                Match(nextToken);
                 Match(Token.NUMBER);
                 break;
             case SETPOS:
@@ -129,11 +127,7 @@ public class Parser {
             case FILLED:
                 Match(nextToken);
                 Match(Token.LBRACKET);
-                nextToken = scanner.nextToken();
-                Match(nextToken);
                 Match(Token.NUMBER);
-                nextToken = scanner.nextToken();
-                Match(nextToken);
                 Match(Token.NUMBER);
                 Match(Token.RBRACKET);
                 break;
@@ -147,17 +141,20 @@ public class Parser {
             case WHILE:
                 Match(nextToken);
                 Match(Token.NUMBER);
-                nextToken = scanner.nextToken();
-                Match(nextToken);
+                nextToken = scanner.scan();
                 switch (nextToken) {
                     case EQUAL:
                     case GREATER:
                     case GREATEREQ:
                     case LESS:
                     case LESSEQ:
-
+                        Match(Token.NUMBER);
+                        Match(Token.LBRACKET);
+                        parseLogoSentence();
+                        Match(Token.RBRACKET);
+                        break;
                     default:
-                        SyntaxError(String.format("Expected one of: EQUAL, GREATER, GREATEREQ, LESS or LESSEQ but found {0}",
+                        SyntaxError(String.format("Expected one of: EQUAL, GREATER, GREATEREQ, LESS or LESSEQ but found %s",
                                 nextToken), new Exception());
                         break;
                 }
@@ -170,7 +167,7 @@ public class Parser {
                 Match(Token.RBRACKET);
                 break;
             default:
-                SyntaxError(String.format("Expected one of: FORWARD, BACK, LEFT, RIGHT or REPEAT but found {0}",
+                SyntaxError(String.format("Expected one of: FORWARD, BACK, LEFT, RIGHT or REPEAT but found %s",
                         nextToken), new Exception());
                 break;
         }
@@ -179,14 +176,14 @@ public class Parser {
         Token nextToken = scanner.scan();
         if (nextToken != token)
         {
-            SyntaxError(String.format("Expected {0} but found {1} (at '{2}')",
+            SyntaxError(String.format("Expected %s but found %s (at '%s')",
                     token,
                     nextToken,
                     scanner.scanBuffer), new Exception());
         }
     }
     private void SyntaxError(String errorMessage, Exception errorCode) throws Exception {
-        throw new Exception(String.format("Error message {0}, error code {1} (at '{2}')",
-                    errorMessage, errorCode, scanner.scanBuffer));
+        throw new Exception(String.format("Error message %s, error code %s (at '%s')",
+                    errorMessage, errorCode.getMessage(), scanner.scanBuffer));
     }
 }

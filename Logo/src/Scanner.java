@@ -53,13 +53,10 @@ public class Scanner {
         reserved.put("FILLED", Token.FILLED);
         reserved.put("FOREVER", Token.FOREVER);
 
-        reserved.put("TO", Token.TO);
-        reserved.put("END", Token.END);
         reserved.put("IF", Token.IF);
         reserved.put("WHILE", Token.WHILE);
 
         reserved.put("=", Token.EQUAL);
-        reserved.put("!", Token.NOT);
         reserved.put("<", Token.LESS);
         reserved.put(">", Token.GREATER);
         reserved.put("<=", Token.LESSEQ);
@@ -83,11 +80,6 @@ public class Scanner {
             {
                 idx++;
                 return Token.EQUAL;
-            }
-            else if (ch == '!')
-            {
-                idx++;
-                return Token.NOT;
             }
             else if (ch == '>')
             {

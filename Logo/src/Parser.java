@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Parser {
     private Scanner scanner;
     public Parser(Scanner logoScanner)
@@ -5,8 +7,9 @@ public class Parser {
         scanner = logoScanner;
     }
     // <logo-program>  ::= <logo-sentence> { <logo-sentence> } <EOF>
-    public void parseLogoProgram() throws Exception {
-        parseLogoSentence();
+    public ArrayList<LogoCommandInterface> parseLogoProgram() throws Exception {
+        ArrayList<LogoCommandInterface> commands = new ArrayList<LogoCommandInterface>();
+        commands.add(parseLogoSentence());
         while (true)
         {
             switch(scanner.nextToken())
@@ -61,11 +64,11 @@ public class Parser {
                 case LESSEQ:
                 case GREATEREQ:
                 case REPEAT:
-                    parseLogoSentence();
+                    commands.add(parseLogoSentence());
                     break;
                 default:
                     Match(Token.EOF);
-                    return;
+                    return commands;
             }
         }
     }
@@ -74,11 +77,15 @@ public class Parser {
     //                   | LEFT <integer>
     //                   | RIGHT <integer>
     //                   | REPEAT <integer> [ <logo-sentence> { <logo-sentence> } ]
-    private void parseLogoSentence() throws Exception {
+    private LogoCommandInterface parseLogoSentence() throws Exception {
+        LogoCommandInterface result = null;
         Token nextToken = scanner.nextToken();
         switch(nextToken)
         {
             case HOME:
+                result = new LogoHomeCommand();
+                Match(nextToken);
+                break;
             case POS:
             case XCOR:
             case YCOR:
@@ -114,6 +121,15 @@ public class Parser {
             case SETBACKGROUND:
                 Match(nextToken);
                 Match(Token.NUMBER);
+                NumberRecord numberRecord = new NumberRecord(nextToken, scanner.scanBuffer);
+                if (nextToken == Token.FORWARD || nextToken == Token.BACK)
+                {
+                    result = new LogoMoveCommand(numberRecord);
+                }
+                else
+                {
+                    result = new LogoTurnCommand(numberRecord);
+                }
                 break;
             case SETXY:
             case ARC:
@@ -171,6 +187,7 @@ public class Parser {
                         nextToken), new Exception());
                 break;
         }
+        return result;
     }
     private void Match(Token token) throws Exception {
         Token nextToken = scanner.scan();

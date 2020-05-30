@@ -87,21 +87,42 @@ public class Parser {
                 Match(nextToken);
                 break;
             case POS:
+                result = new LogoReturnPositionCommand(Token.POS);
+                Match(nextToken);
+                break;
             case XCOR:
+                result = new LogoReturnPositionCommand(Token.XCOR);
+                Match(nextToken);
+                break;
             case YCOR:
+                result = new LogoReturnPositionCommand(Token.YCOR);
+                Match(nextToken);
+                break;
+            case SHOWTURTLE:
+                result = new LogoVisibilityCommand(Token.SHOWTURTLE);
+                Match(nextToken);
+                break;
+            case HIDETURTLE:
+                result = new LogoVisibilityCommand(Token.HIDETURTLE);
+                Match(nextToken);
+                break;
+            case PENDOWN:
+                result = new LogoPenCommand(Token.PENDOWN);
+                Match(nextToken);
+                break;
+            case PENUP:
+                result = new LogoPenCommand(Token.PENUP);
+                Match(nextToken);
+                break;
+            case CLEAN:
             case HEADING:
             case SCRUNCH:
-            case SHOWTURTLE:
-            case HIDETURTLE:
-            case CLEAN:
             case CLEARSCREEN:
             case WRAP:
             case WINDOW:
             case PENCE:
             case FILL:
             case SHOWNP:
-            case PENDOWN:
-            case PENUP:
             case PENPAINT:
             case PENERASE:
             case PENREVERSE:

@@ -26,7 +26,6 @@ public class Parser {
                 case XCOR:
                 case YCOR:
                 case HEADING:
-                case SCRUNCH:
                 case SHOWTURTLE:
                 case HIDETURTLE:
                 case CLEAN:
@@ -44,14 +43,11 @@ public class Parser {
                 case SETX:
                 case SETY:
                 case SETHEADING:
-                case LABEL:
-                case SETLABELHEIGHT:
                 case SETPENCOLOR:
                 case SETPENSIZE:
                 case SETBACKGROUND:
                 case SETXY:
                 case ARC:
-                case SETSCRUNCH:
                 case SETPOS:
                 case TOWARDS:
                 case FILLED:
@@ -80,6 +76,8 @@ public class Parser {
     private LogoCommandInterface parseLogoSentence() throws Exception {
         LogoCommandInterface result = null;
         Token nextToken = scanner.nextToken();
+        NumberRecord numberRecord;
+        NumberRecord numberRecord2;
         switch(nextToken)
         {
             case HOME:
@@ -132,17 +130,9 @@ public class Parser {
             case BACK:
             case LEFT:
             case RIGHT:
-            case SETX:
-            case SETY:
-            case SETHEADING:
-            case LABEL:
-            case SETLABELHEIGHT:
-            case SETPENCOLOR:
-            case SETPENSIZE:
-            case SETBACKGROUND:
                 Match(nextToken);
                 Match(Token.NUMBER);
-                NumberRecord numberRecord = new NumberRecord(nextToken, scanner.scanBuffer);
+                numberRecord = new NumberRecord(nextToken, scanner.scanBuffer);
                 if (nextToken == Token.FORWARD || nextToken == Token.BACK)
                 {
                     result = new LogoMoveCommand(numberRecord);
@@ -152,14 +142,68 @@ public class Parser {
                     result = new LogoTurnCommand(numberRecord);
                 }
                 break;
-            case SETXY:
-            case ARC:
-            case SETSCRUNCH:
+            case SETX:
                 Match(nextToken);
                 Match(Token.NUMBER);
+                numberRecord = new NumberRecord(nextToken, scanner.scanBuffer);
+                result = new LogoPositionCommand(numberRecord, Token.SETX);
+                break;
+            case SETY:
+                Match(nextToken);
                 Match(Token.NUMBER);
+                numberRecord = new NumberRecord(nextToken, scanner.scanBuffer);
+                result = new LogoPositionCommand(numberRecord, Token.SETY);
+                break;
+            case SETPENCOLOR:
+                Match(nextToken);
+                Match(Token.NUMBER);
+                numberRecord = new NumberRecord(nextToken, scanner.scanBuffer);
+                result = new LogoPenCommand(numberRecord, Token.SETPENCOLOR);
+                break;
+            case SETPENSIZE:
+                Match(nextToken);
+                Match(Token.NUMBER);
+                numberRecord = new NumberRecord(nextToken, scanner.scanBuffer);
+                result = new LogoPenCommand(numberRecord, Token.SETPENSIZE);
+                break;
+            case SETBACKGROUND:
+                Match(nextToken);
+                Match(Token.NUMBER);
+                numberRecord = new NumberRecord(nextToken, scanner.scanBuffer);
+                result = new LogoBackgroundCommand(numberRecord, Token.SETBACKGROUND);
+                break;
+            case SETXY:
+                Match(nextToken);
+                Match(Token.NUMBER);
+                numberRecord = new NumberRecord(nextToken, scanner.scanBuffer);
+                Match(Token.NUMBER);
+                numberRecord2 = new NumberRecord(nextToken, scanner.scanBuffer);
+                result = new LogoPositionCommand(numberRecord, numberRecord2, Token.SETXY);
+                break;
+            case SETHEADING:
+                Match(nextToken);
+                Match(Token.NUMBER);
+                numberRecord = new NumberRecord(nextToken, scanner.scanBuffer);
+                result = new LogoPositionCommand(numberRecord, Token.SETHEADING);
+                break;
+            case ARC:
+                Match(nextToken);
+                Match(Token.NUMBER);
+                numberRecord = new NumberRecord(nextToken, scanner.scanBuffer);
+                Match(Token.NUMBER);
+                numberRecord2 = new NumberRecord(nextToken, scanner.scanBuffer);
+                result = new LogoArcCommand(numberRecord, numberRecord2);
                 break;
             case SETPOS:
+                Match(nextToken);
+                Match(Token.LBRACKET);
+                Match(Token.NUMBER);
+                numberRecord = new NumberRecord(nextToken, scanner.scanBuffer);
+                Match(Token.NUMBER);
+                numberRecord2 = new NumberRecord(nextToken, scanner.scanBuffer);
+                result = new LogoPositionCommand(numberRecord, numberRecord2, Token.SETXY);
+                Match(Token.RBRACKET);
+                break;
             case TOWARDS:
             case FILLED:
                 Match(nextToken);

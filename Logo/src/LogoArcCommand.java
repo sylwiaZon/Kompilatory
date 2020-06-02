@@ -1,16 +1,18 @@
-public class LogoMoveCommand implements LogoCommandInterface {
-    public int move;
+public class LogoArcCommand implements LogoCommandInterface {
+    public int radius;
+    public int arc;
     TurtleSituation modifiedSituation;
 
-    public LogoMoveCommand(NumberRecord numberRecord) {
-        this.move = numberRecord.getNumber();
+
+    public LogoArcCommand(NumberRecord numberRecordA, NumberRecord numberRecordR) {
+        radius = numberRecordR.getNumber();
+        arc = numberRecordA.getNumber();
     }
 
     @Override
     public TurtleSituation calculateSituation(TurtleSituation currentSituation) {
         modifiedSituation = new TurtleSituation(currentSituation);
-        modifiedSituation.position.x = 0;
-        modifiedSituation.position.y = 0;
+        //draw??
         return modifiedSituation;
     }
 

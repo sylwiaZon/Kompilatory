@@ -1,9 +1,15 @@
 public class LogoPenCommand implements LogoCommandInterface {
     TurtleSituation modifiedSituation;
     Token pen;
+    int num;
 
     public LogoPenCommand(Token pen) {
         this.pen = pen;
+    }
+
+    public LogoPenCommand(NumberRecord numberRecord, Token pen) {
+        this.pen = pen;
+        this.num = numberRecord.getNumber();
     }
 
     @Override
@@ -13,6 +19,10 @@ public class LogoPenCommand implements LogoCommandInterface {
             modifiedSituation.penDown = true;
         } else if(pen == Token.PENUP) {
             modifiedSituation.penDown = false;
+        } else if(pen == Token.SETPENCOLOR) {
+            modifiedSituation.penColor = num;
+        } else if(pen == Token.SETPENSIZE) {
+            modifiedSituation.penSize = num;
         }
         return modifiedSituation;
     }

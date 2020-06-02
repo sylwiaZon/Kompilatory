@@ -2,9 +2,11 @@ public class TurtleSituation {
     public int angle;
     public int turnAngle;
     public Position position;
-    public int color;
+    public int penColor;
+    public int penSize;
     public boolean turtleShowed;
     public boolean penDown;
+    public int backgroundColor;
 
     public TurtleSituation(int angle, int turnAngle, int x, int y, boolean turtle, boolean pen) {
         this.angle = angle;
@@ -25,7 +27,7 @@ public class TurtleSituation {
         penDown = ts.penDown;
     }
 
-    public class Position{
+    public static class Position{
         public int x;
         public int y;
 
@@ -35,11 +37,13 @@ public class TurtleSituation {
         }
     }
     public void setDefaultSituation() {
-        color = 0; //czarne
+        penColor = 0; //czarne
+        penSize = 1; //cokolwiek
         angle = 0;
         turnAngle = 0;
         position = new Position(0, 0);
         turtleShowed = true;
         penDown = true;
+        backgroundColor = 1; //białe
     }
 }

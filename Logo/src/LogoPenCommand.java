@@ -23,6 +23,10 @@ public class LogoPenCommand implements LogoCommandInterface {
             modifiedSituation.penColor = num;
         } else if(pen == Token.SETPENSIZE) {
             modifiedSituation.penSize = num;
+        }else if(pen == Token.PENPAINT){
+            modifiedSituation.penColor = 1;
+        }else if(pen == Token.PENERASE){
+            modifiedSituation.penColor = modifiedSituation.backgroundColor;
         }
         return modifiedSituation;
     }

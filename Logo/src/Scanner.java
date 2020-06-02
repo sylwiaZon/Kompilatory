@@ -40,14 +40,11 @@ public class Scanner {
         reserved.put("SETX", Token.SETX);
         reserved.put("SETY", Token.SETY);
         reserved.put("SETHEADING", Token.SETHEADING);
-        reserved.put("LABEL", Token.LABEL);
-        reserved.put("SETLABELHEIGHT", Token.SETLABELHEIGHT);
         reserved.put("SETPENCOLOR", Token.SETPENCOLOR);
         reserved.put("SETPENSIZE", Token.SETPENSIZE);
         reserved.put("SETBACKGROUND", Token.SETBACKGROUND);
         reserved.put("SETXY", Token.SETXY);
         reserved.put("ARC", Token.ARC);
-        reserved.put("SETSCRUNCH", Token.SETSCRUNCH);
         reserved.put("SETPOS", Token.SETPOS);
         reserved.put("TOWARDS", Token.TOWARDS);
         reserved.put("FILLED", Token.FILLED);

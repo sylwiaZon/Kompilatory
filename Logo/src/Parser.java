@@ -1,3 +1,4 @@
+import javax.swing.text.MutableAttributeSet;
 import java.util.ArrayList;
 
 public class Parser {
@@ -113,16 +114,33 @@ public class Parser {
                 Match(nextToken);
                 break;
             case CLEAN:
+                result = new LogoBackgroundCommand(Token.CLEAN);
+                Match(nextToken);
+                break;
             case HEADING:
-            case SCRUNCH:
+                result = new LogoReturnPositionCommand(Token.HEADING);
+                Match(nextToken);
+                break;
             case CLEARSCREEN:
+                result = new LogoBackgroundCommand(Token.CLEAN);
+                Match(nextToken);
+                break;
             case WRAP:
             case WINDOW:
             case PENCE:
             case FILL:
+                Match(nextToken);
+                break;
             case SHOWNP:
+                result = new LogoReturnPositionCommand(Token.SHOWNP);
+                Match(nextToken);
+                break;
             case PENPAINT:
+                result = new LogoPenCommand(Token.PENPAINT);
+                Match(nextToken);
             case PENERASE:
+                result = new LogoPenCommand(Token.PENERASE);
+                Match(nextToken);
             case PENREVERSE:
                 Match(nextToken);
                 break;

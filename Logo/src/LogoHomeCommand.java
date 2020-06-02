@@ -4,6 +4,7 @@ public class LogoHomeCommand implements LogoCommandInterface {
     @Override
     public TurtleSituation calculateSituation(TurtleSituation currentSituation) {
         modifiedSituation = new TurtleSituation(currentSituation);
+        modifiedSituation.centerTurtle();
         return modifiedSituation;
     }
 

@@ -46,4 +46,11 @@ public class TurtleSituation {
         penDown = true;
         backgroundColor = 1; //białe
     }
+    public void centerTurtle() {
+        angle = 0;
+        turnAngle = 0;
+        position = new Position(0, 0);
+        turtleShowed = true;
+        penDown = true;
+    }
 }

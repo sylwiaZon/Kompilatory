@@ -9,8 +9,8 @@ public class LogoMoveCommand implements LogoCommandInterface {
     @Override
     public TurtleSituation calculateSituation(TurtleSituation currentSituation) {
         modifiedSituation = new TurtleSituation(currentSituation);
-        int x ;
-        int y;
+        int x=0;
+        int y=0;
         int angle = modifiedSituation.angle;
         if(move<0){
           angle+=180;

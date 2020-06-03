@@ -1,11 +1,14 @@
 package Logo.Compiler;
 
 import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
 
 public class LogoBackgroundCommand implements LogoCommandInterface {
     TurtleSituation modifiedSituation;
     Token pen;
     int num;
+
 
     public LogoBackgroundCommand(NumberRecord numberRecord, Token pen) {
         this.pen = pen;
@@ -28,9 +31,11 @@ public class LogoBackgroundCommand implements LogoCommandInterface {
     @Override
     public Canvas draw(Canvas canvas) {
         if(pen== Token.CLEAN){
-            System.out.println("czyscimy ekran");
+            GraphicsContext gc = canvas.getGraphicsContext2D();
+            gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
         }else if(pen == Token.CLEARSCREEN){
-            System.out.println("czyscimy ekran + komenda home");
+            GraphicsContext gc = canvas.getGraphicsContext2D();
+            gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
         }
         return canvas;
     }

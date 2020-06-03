@@ -118,7 +118,7 @@ public class Parser {
                 Match(nextToken);
                 break;
             case CLEARSCREEN:
-                result = new LogoBackgroundCommand(Token.CLEAN);
+                result = new LogoBackgroundCommand(Token.CLEARSCREEN);
                 Match(nextToken);
                 break;
             case SHOWNP:

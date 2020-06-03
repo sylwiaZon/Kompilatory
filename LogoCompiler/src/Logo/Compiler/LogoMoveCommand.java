@@ -76,7 +76,7 @@ public class LogoMoveCommand implements LogoCommandInterface {
         gc.setStroke(Color.GREEN);
         gc.setLineWidth(5);
         gc.strokeLine(curentSituation.position.x, curentSituation.position.y, modifiedSituation.position.x, modifiedSituation.position.y);
-       
+
         return canvas;
     }
 }

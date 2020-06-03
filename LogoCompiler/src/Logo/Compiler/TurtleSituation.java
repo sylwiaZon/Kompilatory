@@ -43,7 +43,7 @@ public class TurtleSituation {
         penSize = 1; //cokolwiek
         angle = 0;
         turnAngle = 0;
-        position = new Position(300, 300);
+        position = new Position(400, 240);
         turtleShowed = true;
         penDown = true;
         backgroundColor = 1; //białe
@@ -51,7 +51,7 @@ public class TurtleSituation {
     public void centerTurtle() {
         angle = 0;
         turnAngle = 0;
-        position = new Position(0, 0);
+        position = new Position(400, 240);
         turtleShowed = true;
         penDown = true;
     }

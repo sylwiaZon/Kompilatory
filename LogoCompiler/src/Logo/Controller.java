@@ -38,10 +38,12 @@ public class Controller implements Initializable {
             if(mainPane.getChildren().size()>2){
                 mainPane.getChildren().remove(mainPane.getChildren().size()-1);
             }
-
+            System.out.println(canvas.getHeight());
+            System.out.println(canvas.getWidth());
             situation = Compiler.compile(commands.getText().toUpperCase(), canvas, situation);
             Image img = new Image("file:/Users/pyszczekk/Desktop/Kompilatory/LogoCompiler/src/Logo/szmuc.png");
-
+            if(situation.backgroundColor==2)
+                canvas.getParent().setStyle("-fx-background-color: red");
             //Setting the image view
             ImageView imageView = new ImageView(img);
             imageView.setFitHeight(40);

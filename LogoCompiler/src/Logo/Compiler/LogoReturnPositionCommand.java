@@ -1,3 +1,7 @@
+package Logo.Compiler;
+
+import javafx.scene.canvas.Canvas;
+
 public class LogoReturnPositionCommand implements LogoCommandInterface {
     TurtleSituation modifiedSituation;
     Token positionToReturn;
@@ -10,7 +14,7 @@ public class LogoReturnPositionCommand implements LogoCommandInterface {
     public TurtleSituation calculateSituation(TurtleSituation currentSituation) { modifiedSituation = currentSituation;return null; }
 
     @Override
-    public void draw() {
+    public Canvas draw(Canvas canvas) {
         if(positionToReturn == Token.POS){
             System.out.println(modifiedSituation.position);
         }else if(positionToReturn == Token.HEADING){
@@ -19,5 +23,6 @@ public class LogoReturnPositionCommand implements LogoCommandInterface {
             System.out.println(modifiedSituation.turtleShowed);
         }
 
+        return canvas;
     }
 }

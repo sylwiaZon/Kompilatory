@@ -1,3 +1,7 @@
+package Logo.Compiler;
+
+import javafx.scene.canvas.Canvas;
+
 public class LogoPenCommand implements LogoCommandInterface {
     TurtleSituation modifiedSituation;
     Token pen;
@@ -32,7 +36,8 @@ public class LogoPenCommand implements LogoCommandInterface {
     }
 
     @Override
-    public void draw() {
+    public Canvas draw(Canvas canvas) {
 
+        return canvas;
     }
 }

@@ -1,4 +1,8 @@
+package Logo.Compiler;
+
+import javafx.scene.canvas.Canvas;
+
 public interface LogoCommandInterface {
     TurtleSituation calculateSituation(TurtleSituation currentSituation);
-    void draw();
+    Canvas draw(Canvas canvas);
 }

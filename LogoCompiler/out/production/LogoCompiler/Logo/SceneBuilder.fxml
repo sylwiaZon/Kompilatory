@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Logo.Controller">
+   <bottom>
+      <BorderPane prefHeight="117.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <left>
+            <TextArea fx:id="commands" prefHeight="117.0" prefWidth="704.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Button fx:id="compile" mnemonicParsing="false" onAction="#draw" text="Do it!" textAlignment="CENTER" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets right="20.0" />
+               </BorderPane.margin>
+            </Button>
+         </right>
+      </BorderPane>
+   </bottom>
+   <top>
+      <Canvas fx:id="canvas" height="479.0" width="802.0" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>

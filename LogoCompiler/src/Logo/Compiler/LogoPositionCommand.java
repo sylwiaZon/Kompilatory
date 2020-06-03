@@ -1,3 +1,7 @@
+package Logo.Compiler;
+
+import javafx.scene.canvas.Canvas;
+
 public class LogoPositionCommand implements LogoCommandInterface {
     public int pos;
     public TurtleSituation.Position position;
@@ -31,7 +35,8 @@ public class LogoPositionCommand implements LogoCommandInterface {
     }
 
     @Override
-    public void draw() {
+    public Canvas draw(Canvas canvas) {
         //rysuje sie
+        return canvas;
     }
 }

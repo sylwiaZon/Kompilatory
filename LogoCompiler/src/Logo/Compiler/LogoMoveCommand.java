@@ -1,6 +1,15 @@
+package Logo.Compiler;
+
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
+
 public class LogoMoveCommand implements LogoCommandInterface {
     public int move;
     TurtleSituation modifiedSituation;
+    TurtleSituation curentSituation;
 
     public LogoMoveCommand(NumberRecord numberRecord) {
         this.move = numberRecord.getNumber();
@@ -8,6 +17,7 @@ public class LogoMoveCommand implements LogoCommandInterface {
 
     @Override
     public TurtleSituation calculateSituation(TurtleSituation currentSituation) {
+        this.curentSituation = currentSituation;
         modifiedSituation = new TurtleSituation(currentSituation);
         int x=0 ;
         int y=0;
@@ -57,7 +67,11 @@ public class LogoMoveCommand implements LogoCommandInterface {
     }
 
     @Override
-    public void draw() {
-        //rysuje sie
+    public Canvas draw(Canvas canvas) {
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+        gc.setStroke(Color.GREEN);
+        gc.setLineWidth(5);
+        gc.strokeLine(curentSituation.position.x, curentSituation.position.y, modifiedSituation.position.x, modifiedSituation.position.y);
+        return canvas;
     }
 }

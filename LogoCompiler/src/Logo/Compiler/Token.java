@@ -1,3 +1,5 @@
+package Logo.Compiler;
+
 public enum Token {
     REPEAT,
     FORWARD,

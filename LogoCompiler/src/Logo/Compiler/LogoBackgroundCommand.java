@@ -1,3 +1,7 @@
+package Logo.Compiler;
+
+import javafx.scene.canvas.Canvas;
+
 public class LogoBackgroundCommand implements LogoCommandInterface {
     TurtleSituation modifiedSituation;
     Token pen;
@@ -22,11 +26,12 @@ public class LogoBackgroundCommand implements LogoCommandInterface {
     }
 
     @Override
-    public void draw() {
+    public Canvas draw(Canvas canvas) {
         if(pen== Token.CLEAN){
             System.out.println("czyscimy ekran");
         }else if(pen == Token.CLEARSCREEN){
             System.out.println("czyscimy ekran + komenda home");
         }
+        return canvas;
     }
 }

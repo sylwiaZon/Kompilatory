@@ -1,16 +1,19 @@
 package Logo.Compiler;
 
+import javafx.scene.canvas.Canvas;
+
 import java.util.ArrayList;
 
-public class ParserTest {
-    public static void main(String[] args) throws Exception {
-        String input = "REPEAT 5 [LEFT 4 RIGHT 4]";
-        Scanner scanner = new Scanner(input);
+public class Compiler {
+    public static TurtleSituation compile(String args, Canvas canvas, TurtleSituation situation) throws Exception {
+        Scanner scanner = new Scanner(args);
         Parser parser = new Parser(scanner);
         ArrayList<LogoCommandInterface> stack = parser.parseLogoProgram();
-        System.out.println(stack.size());
+
         for(LogoCommandInterface l: stack){
-            System.out.println(l);
+            situation = l.calculateSituation(situation);
+            canvas = l.draw(canvas);
         }
+        return  situation;
     }
 }

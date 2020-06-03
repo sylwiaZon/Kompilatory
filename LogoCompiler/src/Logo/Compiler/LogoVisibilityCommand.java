@@ -1,3 +1,7 @@
+package Logo.Compiler;
+
+import javafx.scene.canvas.Canvas;
+
 public class LogoVisibilityCommand implements LogoCommandInterface {
     TurtleSituation modifiedSituation;
     Token visibility;
@@ -18,7 +22,8 @@ public class LogoVisibilityCommand implements LogoCommandInterface {
     }
 
     @Override
-    public void draw() {
+    public Canvas draw(Canvas canvas) {
 
+        return canvas;
     }
 }

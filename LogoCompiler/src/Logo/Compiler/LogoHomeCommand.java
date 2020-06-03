@@ -1,3 +1,7 @@
+package Logo.Compiler;
+
+import javafx.scene.canvas.Canvas;
+
 public class LogoHomeCommand implements LogoCommandInterface {
     TurtleSituation modifiedSituation;
 
@@ -9,7 +13,8 @@ public class LogoHomeCommand implements LogoCommandInterface {
     }
 
     @Override
-    public void draw() {
+    public Canvas draw(Canvas canvas) {
         //rysuje sie
+        return canvas;
     }
 }

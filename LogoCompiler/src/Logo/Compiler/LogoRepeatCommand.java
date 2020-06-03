@@ -1,3 +1,7 @@
+package Logo.Compiler;
+
+import javafx.scene.canvas.Canvas;
+
 public class LogoRepeatCommand implements LogoCommandInterface {
     public LogoCommandInterface commandToRepeat;
     TurtleSituation modifiedSituation;
@@ -16,7 +20,8 @@ public class LogoRepeatCommand implements LogoCommandInterface {
     }
 
     @Override
-    public void draw() {
+    public Canvas draw(Canvas canvas) {
         //rysuje sie
+        return canvas;
     }
 }

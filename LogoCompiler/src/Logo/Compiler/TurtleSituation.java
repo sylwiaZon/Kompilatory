@@ -1,3 +1,5 @@
+package Logo.Compiler;
+
 public class TurtleSituation {
     public int angle;
     public int turnAngle;
@@ -41,7 +43,7 @@ public class TurtleSituation {
         penSize = 1; //cokolwiek
         angle = 0;
         turnAngle = 0;
-        position = new Position(0, 0);
+        position = new Position(300, 300);
         turtleShowed = true;
         penDown = true;
         backgroundColor = 1; //białe

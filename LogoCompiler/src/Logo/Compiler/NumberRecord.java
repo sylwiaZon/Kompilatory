@@ -1,3 +1,5 @@
+package Logo.Compiler;
+
 public class NumberRecord {
     private int number;
 

@@ -1,3 +1,7 @@
+package Logo.Compiler;
+
+import javafx.scene.canvas.Canvas;
+
 public class LogoArcCommand implements LogoCommandInterface {
     public int radius;
     public int arc;
@@ -17,7 +21,8 @@ public class LogoArcCommand implements LogoCommandInterface {
     }
 
     @Override
-    public void draw() {
+    public Canvas draw(Canvas canvas) {
         //rysuje sie
+        return canvas;
     }
 }

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class Parser {
     private Scanner scanner;
+    private ArrayList<LogoCommandInterface> commandsToRepeat = new ArrayList<>();
+    private boolean rightBracketFound = false;
     public Parser(Scanner logoScanner)
     {
         scanner = logoScanner;
@@ -257,12 +259,21 @@ public class Parser {
                         break;
                 }
                 break;
+            case RBRACKET:
+                rightBracketFound = true;
+                break;
             case REPEAT:
                 Match(nextToken);
                 Match(Token.NUMBER);
+                numberRecord = new NumberRecord(nextToken, scanner.scanBuffer);
                 Match(Token.LBRACKET);
-                parseLogoSentence();
+                while(true) {
+                    result = parseLogoSentence();
+                    if(rightBracketFound) break;
+                    commandsToRepeat.add(result);
+                }
                 Match(Token.RBRACKET);
+                result = new LogoRepeatCommand(numberRecord,commandsToRepeat);
                 break;
             default:
                 SyntaxError(String.format("Expected one of: FORWARD, BACK, LEFT, RIGHT or REPEAT but found %s",
@@ -281,6 +292,8 @@ public class Parser {
                     scanner.scanBuffer), new Exception());
         }
     }
+
+
     private void SyntaxError(String errorMessage, Exception errorCode) throws Exception {
         throw new Exception(String.format("Error message %s, error code %s (at '%s')",
                     errorMessage, errorCode.getMessage(), scanner.scanBuffer));

@@ -48,7 +48,7 @@ public class Controller implements Initializable {
             if(mainPane.getChildren().size()>2){
                 mainPane.getChildren().remove(mainPane.getChildren().size()-1);
             }
-            Image img = new Image(setImage(0));
+            Image img = new Image(setImage(situation.icon));
             setColor(situation.backgroundColor);
             ImageView imageView = new ImageView(img);
             imageView.setFitHeight(40);
@@ -93,9 +93,37 @@ public class Controller implements Initializable {
     }
 
     private String setImage(int num){
-        String path = "file:" + System.getProperty("user.dir").replace('\\', '/') + "/src/Logo";
-        if(num == 0){
-            path += "/szmuc.png";
+        String path = "file:" + System.getProperty("user.dir").replace('\\', '/') + "/src/Logo/icons";
+        switch(num){
+            case 0:
+                path += "/cancer.png";
+                break;
+            case 1:
+                path += "/bull.png";
+                break;
+            case 2:
+                path += "/chicken.png";
+                break;
+            case 3:
+                path += "/koala.png";
+                break;
+            case 4:
+                path += "/fox.png";
+                break;
+            case 5:
+                path += "/hedgehog.png";
+                break;
+            case 6:
+                path += "/pig.png";
+                break;
+            case 7:
+                path += "/tiger.png";
+                break;
+            case 8:
+                path += "/whale.png";
+                break;
+            default:
+                path += "/cancer.png";
         }
         System.out.println(path);
         return path;

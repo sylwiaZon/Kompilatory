@@ -57,6 +57,7 @@ public class Parser {
                 case LESSEQ:
                 case GREATEREQ:
                 case REPEAT:
+                case SETICON:
                     commands.add(parseLogoSentence());
                     break;
                 default:
@@ -128,10 +129,13 @@ public class Parser {
             case PENPAINT:
                 result = new LogoPenCommand(Token.PENPAINT);
                 Match(nextToken);
+                break;
             case PENERASE:
                 result = new LogoPenCommand(Token.PENERASE);
                 Match(nextToken);
+                break;
             case PENREVERSE:
+                result = new LogoPenCommand(Token.PENREVERSE);
                 Match(nextToken);
                 break;
             case FORWARD:
@@ -149,6 +153,12 @@ public class Parser {
                 {
                     result = new LogoTurnCommand(numberRecord);
                 }
+                break;
+            case SETICON:
+                Match(nextToken);
+                Match(Token.NUMBER);
+                numberRecord = new NumberRecord(nextToken, scanner.scanBuffer);
+                result = new LogoIconCommand(numberRecord);
                 break;
             case SETX:
                 Match(nextToken);

@@ -2,26 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Logo/Compiler/Compiler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Logo/Compiler/LogoArcCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Logo/Compiler/LogoBackgroundCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Logo/Compiler/LogoCommandInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Logo/Compiler/LogoHomeCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Logo/Compiler/LogoMoveCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Logo/Compiler/LogoPenCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Logo/Compiler/LogoPositionCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Logo/Compiler/LogoRepeatCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Logo/Compiler/LogoReturnPositionCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Logo/Compiler/LogoTurnCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Logo/Compiler/LogoVisibilityCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Logo/Compiler/NumberRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Logo/Compiler/Parser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Logo/Compiler/Scanner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Logo/Compiler/Token.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Logo/Compiler/TurtleSituation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Logo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Logo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Logo/src/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Logo/src/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Logo/src/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Logo/src/Token.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logo/Compiler/LogoBackgroundCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logo/Compiler/LogoBackgroundCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logo/Compiler/LogoHomeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logo/Compiler/LogoHomeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logo/Compiler/LogoMoveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logo/Compiler/LogoMoveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logo/Compiler/LogoPenCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logo/Compiler/LogoPenCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logo/Compiler/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logo/Compiler/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logo/Compiler/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logo/Compiler/Scanner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logo/Compiler/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logo/Compiler/Token.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logo/Compiler/TurtleSituation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logo/Compiler/TurtleSituation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logo/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logo/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logo/SceneBuilder.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logo/SceneBuilder.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="112" column="40" lean-forward="true" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
+            <state relative-caret-position="1496">
+              <caret line="160" column="44" lean-forward="true" selection-start-line="160" selection-start-column="44" selection-end-line="160" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -90,60 +82,79 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logo/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+            <state relative-caret-position="738">
+              <caret line="84" column="80" lean-forward="true" selection-start-line="84" selection-start-column="80" selection-end-line="84" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#765#766#0" expanded="true" />
-                <element signature="e#814#815#0" expanded="true" />
+                <element signature="e#3682#3683#0" expanded="true" />
+                <element signature="e#3731#3732#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/LogoTurnCommand.java">
+        <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/Token.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+            <state relative-caret-position="214">
+              <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Logo/SceneBuilder.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/LogoIconCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding>
-                <element signature="e#203#204#0" expanded="true" />
-                <element signature="e#256#257#0" expanded="true" />
-                <element signature="e#541#542#0" expanded="true" />
-                <element signature="e#577#578#0" expanded="true" />
+                <element signature="e#305#306#0" expanded="true" />
+                <element signature="e#337#338#0" expanded="true" />
+                <element signature="e#704#705#0" expanded="true" />
+                <element signature="e#733#734#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/LogoMoveCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="157">
+              <caret line="75" column="43" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/LogoMoveCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="74" selection-start-line="74" selection-end-line="74" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#202#203#0" expanded="true" />
-                <element signature="e#254#255#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/TurtleSituation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+            <state relative-caret-position="225">
+              <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/LogoArcCommand.java">
+        <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/LogoPenCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="51">
+              <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#227#228#0" expanded="true" />
+                <element signature="e#257#258#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -151,12 +162,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/LogoBackgroundCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="17" column="45" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="45" />
-              <folding>
-                <element signature="e#353#354#0" expanded="true" />
-                <element signature="e#383#384#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="341">
+              <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -164,34 +171,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/LogoHomeCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/Compiler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/LogoCommandInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+            <state relative-caret-position="85">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -205,21 +198,26 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/Logo/Compiler/Scanner.java" />
-        <option value="$PROJECT_DIR$/src/Logo/SceneBuilder.fxml" />
         <option value="$PROJECT_DIR$/src/Logo/Main.java" />
         <option value="$PROJECT_DIR$/src/Logo/Compiler/ParserTest.java" />
         <option value="$PROJECT_DIR$/src/Logo/Compiler/LogoTurnCommand.java" />
-        <option value="$PROJECT_DIR$/src/Logo/Compiler/LogoHomeCommand.java" />
-        <option value="$PROJECT_DIR$/src/Logo/Compiler/TurtleSituation.java" />
-        <option value="$PROJECT_DIR$/src/Logo/Controller.java" />
         <option value="$PROJECT_DIR$/src/Logo/Compiler/Compiler.java" />
         <option value="$PROJECT_DIR$/src/Logo/Compiler/LogoMoveCommand.java" />
+        <option value="$PROJECT_DIR$/src/Logo/Compiler/LogoHomeCommand.java" />
+        <option value="$PROJECT_DIR$/src/Logo/Compiler/Token.java" />
+        <option value="$PROJECT_DIR$/src/Logo/Compiler/Scanner.java" />
+        <option value="$PROJECT_DIR$/src/Logo/Compiler/Parser.java" />
+        <option value="$PROJECT_DIR$/src/Logo/Compiler/LogoIconCommand.java" />
+        <option value="$PROJECT_DIR$/src/Logo/Compiler/LogoBackgroundCommand.java" />
+        <option value="$PROJECT_DIR$/src/Logo/SceneBuilder.fxml" />
+        <option value="$PROJECT_DIR$/src/Logo/Controller.java" />
+        <option value="$PROJECT_DIR$/src/Logo/Compiler/LogoPenCommand.java" />
+        <option value="$PROJECT_DIR$/src/Logo/Compiler/TurtleSituation.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1386" />
@@ -277,7 +275,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591201876977" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1591284170293" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/openjfx-11.0.1_windows-x64_bin-sdk/javafx-sdk-11.0.1/lib" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -286,6 +284,9 @@
     <property name="recentsLimit" value="5" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Logo.Compiler" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Sylwia\Desktop\Studia\Kompilatory\Kompilatory\LogoCompiler\src\Logo\Compiler" />
     </key>
@@ -387,34 +388,28 @@
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1591195055601" duration="6609000" />
+      <workItem from="1591279740092" duration="4193000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7911000" />
+    <option name="totallyTimeSpent" value="12104000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1386" height="788" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Azure Explorer" weight="0.32980332" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.3325792" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.33913702" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
-      <window_info anchor="bottom" id="Remote Spark Job in Cluster" />
-      <window_info anchor="bottom" id="Cosmos Serverless Spark Jobs" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Debug Remote Spark Job in Cluster" />
-      <window_info anchor="bottom" id="Azure Activity Log" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Image Layers" order="6" />
+      <window_info id="Azure Explorer" order="7" weight="0.32980332" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30229008" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30163935" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -426,10 +421,13 @@
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.3289689" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="Debug Remote Spark Job in Cluster" order="14" />
+      <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Remote Spark Job in Cluster" order="16" />
+      <window_info anchor="bottom" id="Cosmos Serverless Spark Jobs" order="17" />
+      <window_info anchor="bottom" id="Database Changes" order="18" />
+      <window_info anchor="bottom" id="Terminal" order="19" />
+      <window_info anchor="bottom" id="Azure Activity Log" order="20" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -437,6 +435,10 @@
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Maven" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,14 +453,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Logo/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logo/sample.fxml" />
     <entry file="jar://$USER_HOME$/openjfx-11.0.1_windows-x64_bin-sdk/javafx-sdk-11.0.1/lib/javafx.graphics.jar!/javafx/application/Application.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
@@ -478,21 +473,6 @@
     <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/LogoPositionCommand.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/Scanner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="50" column="43" lean-forward="true" selection-start-line="50" selection-start-column="43" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logo/SceneBuilder.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Logo/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -505,103 +485,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-434">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/LogoTurnCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-          <folding>
-            <element signature="e#203#204#0" expanded="true" />
-            <element signature="e#256#257#0" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
-            <element signature="e#577#578#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/LogoArcCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/LogoHomeCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/LogoCommandInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="112" column="40" lean-forward="true" selection-start-line="112" selection-start-column="40" selection-end-line="112" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/LogoBackgroundCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="17" column="45" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="45" />
-          <folding>
-            <element signature="e#353#354#0" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/TurtleSituation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logo/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#765#766#0" expanded="true" />
-            <element signature="e#814#815#0" expanded="true" />
-          </folding>
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/Compiler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        <state relative-caret-position="255">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/LogoCommandInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/Scanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1468">
+          <caret line="47" column="47" lean-forward="true" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/LogoHomeCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="160" column="44" lean-forward="true" selection-start-line="160" selection-start-column="44" selection-end-line="160" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/LogoBackgroundCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logo/SceneBuilder.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/LogoPenCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#227#228#0" expanded="true" />
+            <element signature="e#257#258#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logo/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="84" column="80" lean-forward="true" selection-start-line="84" selection-start-column="80" selection-end-line="84" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3682#3683#0" expanded="true" />
+            <element signature="e#3731#3732#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/LogoIconCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="e#305#306#0" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+            <element signature="e#704#705#0" expanded="true" />
+            <element signature="e#733#734#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/LogoMoveCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#202#203#0" expanded="true" />
-            <element signature="e#254#255#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="157">
+          <caret line="75" column="43" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logo/Compiler/TurtleSituation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
         </state>
       </provider>
     </entry>

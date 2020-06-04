@@ -1,14 +1,17 @@
 package Logo.Compiler;
 
+import javafx.scene.paint.Color;
+
 public class TurtleSituation {
     public int angle;
     public int turnAngle;
     public Position position;
-    public int penColor;
+    public Color penColor;
     public int penSize;
     public boolean turtleShowed;
     public boolean penDown;
-    public int backgroundColor;
+    public Color backgroundColor;
+    public int icon;
 
     public TurtleSituation(int angle, int turnAngle, int x, int y, boolean turtle, boolean pen) {
         this.angle = angle;
@@ -22,11 +25,15 @@ public class TurtleSituation {
     }
 
     public TurtleSituation(TurtleSituation ts){
-        this.angle = ts.angle;
-        this.turnAngle = ts.turnAngle;
-        position = new Position(ts.position.x, ts.position.y);
+        penColor = ts.penColor; //czarne
+        penSize = ts.penSize; //cokolwiek
+        angle = ts.angle;
+        turnAngle = ts.turnAngle;
+        position = ts.position;
         turtleShowed = ts.turtleShowed;
         penDown = ts.penDown;
+        backgroundColor = ts.backgroundColor; //białe
+        icon = ts.icon;
     }
 
     public static class Position{
@@ -39,14 +46,15 @@ public class TurtleSituation {
         }
     }
     public void setDefaultSituation() {
-        penColor = 0; //czarne
+        penColor = Color.BLACK; //czarne
         penSize = 1; //cokolwiek
         angle = 0;
         turnAngle = 0;
         position = new Position(400, 240);
         turtleShowed = true;
         penDown = true;
-        backgroundColor = 1; //białe
+        backgroundColor = Color.WHITE; //białe
+        icon = 0;
     }
     public void centerTurtle() {
         angle = 0;

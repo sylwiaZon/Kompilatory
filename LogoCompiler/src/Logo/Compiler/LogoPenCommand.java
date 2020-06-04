@@ -1,6 +1,7 @@
 package Logo.Compiler;
 
 import javafx.scene.canvas.Canvas;
+import javafx.scene.paint.Color;
 
 public class LogoPenCommand implements LogoCommandInterface {
     TurtleSituation modifiedSituation;
@@ -24,15 +25,49 @@ public class LogoPenCommand implements LogoCommandInterface {
         } else if(pen == Token.PENUP) {
             modifiedSituation.penDown = false;
         } else if(pen == Token.SETPENCOLOR) {
-            modifiedSituation.penColor = num;
+            modifiedSituation.penColor = getColorToSet(num);
+            System.out.println(modifiedSituation.penColor);
         } else if(pen == Token.SETPENSIZE) {
             modifiedSituation.penSize = num;
         }else if(pen == Token.PENPAINT){
-            modifiedSituation.penColor = 1;
+            modifiedSituation.penColor = Color.BLACK;
         }else if(pen == Token.PENERASE){
             modifiedSituation.penColor = modifiedSituation.backgroundColor;
+        }else if(pen == Token.PENREVERSE){
+            if(currentSituation.penColor == currentSituation.backgroundColor){
+                modifiedSituation.penColor = Color.BLACK;
+            } else {
+                modifiedSituation.penColor = modifiedSituation.backgroundColor;
+            }
         }
         return modifiedSituation;
+    }
+
+    private Color getColorToSet(int num){
+        switch(num) {
+            case 0:
+                return Color.BLACK;
+            case 1:
+                return Color.PINK;
+            case 2:
+                return Color.AZURE;
+            case 3:
+                return Color.RED;
+            case 4:
+                return Color.SALMON;
+            case 5:
+                return Color.GREENYELLOW;
+            case 6:
+                return Color.LAVENDER;
+            case 7:
+                return Color.CORNFLOWERBLUE;
+            case 8:
+                return Color.ROYALBLUE;
+            case 9:
+                return Color.GAINSBORO;
+            default:
+                return Color.BLACK;
+        }
     }
 
     @Override

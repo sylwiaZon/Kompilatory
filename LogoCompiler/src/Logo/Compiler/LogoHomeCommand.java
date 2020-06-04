@@ -18,8 +18,8 @@ public class LogoHomeCommand implements LogoCommandInterface {
     @Override
     public Canvas draw(Canvas canvas) {
         GraphicsContext gc = canvas.getGraphicsContext2D();
-        gc.setStroke(Color.GREEN);
-        gc.setLineWidth(5);
+        gc.setStroke(modifiedSituation.penColor);
+        gc.setLineWidth(modifiedSituation.penSize);
         gc.strokeLine(currentSituation.position.x, currentSituation.position.y, modifiedSituation.position.x, modifiedSituation.position.y);
         return canvas;
     }

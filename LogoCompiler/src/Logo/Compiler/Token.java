@@ -43,5 +43,6 @@ public enum Token {
     LESS,
     GREATER,
     LESSEQ,
-    GREATEREQ
+    GREATEREQ,
+    SETICON
 }

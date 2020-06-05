@@ -27,13 +27,7 @@ public class LogoArcCommand implements LogoCommandInterface {
         GraphicsContext gc = canvas.getGraphicsContext2D();
         gc.setStroke(modifiedSituation.penColor);
         gc.setLineWidth(modifiedSituation.penSize);
-        if(this.arc<modifiedSituation.angle){
-            gc.strokeArc(modifiedSituation.position.x,modifiedSituation.position.y,this.radius,this.radius, this.arc,modifiedSituation.angle, ArcType.OPEN);
-
-        }else{
-            gc.strokeArc(modifiedSituation.position.x,modifiedSituation.position.y,this.radius,this.radius,modifiedSituation.angle, this.arc, ArcType.OPEN);
-
-        }
-         return canvas;
+        gc.strokeArc(modifiedSituation.position.x-this.radius/2,modifiedSituation.position.y-this.radius/2,this.radius,this.radius, modifiedSituation.angle-90, this.arc, ArcType.OPEN);
+        return canvas;
     }
 }

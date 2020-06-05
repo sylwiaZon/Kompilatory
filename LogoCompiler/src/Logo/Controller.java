@@ -42,8 +42,7 @@ public class Controller implements Initializable {
     @FXML
     public void draw(ActionEvent event) {
         try {
-            System.out.println(canvas.getHeight());
-            System.out.println(canvas.getWidth());
+
             situation = Compiler.compile(commands.getText().toUpperCase(), canvas, situation);
             if(mainPane.getChildren().size()>2){
                 mainPane.getChildren().remove(mainPane.getChildren().size()-1);
@@ -132,5 +131,7 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         situation = new TurtleSituation();
+        commands.setText("home");
+        this.draw(new ActionEvent());
     }
 }

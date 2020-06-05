@@ -11,6 +11,9 @@ public class Compiler {
         ArrayList<LogoCommandInterface> stack = parser.parseLogoProgram();
 
         for(LogoCommandInterface l: stack){
+            if(l.getClass().getName() == "Logo.Compiler.LogoRepeatCommand"){
+                l.draw(canvas);
+            }
             situation = l.calculateSituation(situation);
             canvas = l.draw(canvas);
         }

@@ -6,7 +6,7 @@ public class NumberRecord {
     public NumberRecord(Token directionToken, String numberAsString)
     {
         number = Integer.parseInt(numberAsString);
-        if (directionToken == Token.BACK || directionToken == Token.RIGHT)
+        if (directionToken == Token.FORWARD || directionToken == Token.LEFT)
         {
             number = (-1)*number;
         }

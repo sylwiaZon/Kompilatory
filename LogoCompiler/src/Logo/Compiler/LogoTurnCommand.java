@@ -14,12 +14,17 @@ public class LogoTurnCommand implements LogoCommandInterface {
     public TurtleSituation calculateSituation(TurtleSituation currentSituation) {
         modifiedSituation = new TurtleSituation(currentSituation);
         modifiedSituation.angle += angle;
+
+        if(modifiedSituation.angle<0){
+            modifiedSituation.angle=360+modifiedSituation.angle;
+        }
+        modifiedSituation.angle = modifiedSituation.angle%360;
         return modifiedSituation;
     }
 
     @Override
     public Canvas draw(Canvas canvas) {
-        System.out.println(angle);
+        System.out.println(modifiedSituation.angle);
         return canvas;
     }
 }

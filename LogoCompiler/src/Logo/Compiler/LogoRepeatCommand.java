@@ -9,7 +9,7 @@ public class LogoRepeatCommand implements LogoCommandInterface {
     public ArrayList<LogoCommandInterface> commandsToRepeat;
     TurtleSituation modifiedSituation;
     public int repeatCounter;
-
+    Canvas canvas;
 
     public LogoRepeatCommand(NumberRecord numberRecord, ArrayList<LogoCommandInterface> commands) {
         repeatCounter = numberRecord.getNumber();
@@ -21,6 +21,7 @@ public class LogoRepeatCommand implements LogoCommandInterface {
         for(int i = 0; i < repeatCounter; i++){
             for(LogoCommandInterface command: commandsToRepeat) {
                 modifiedSituation = command.calculateSituation(modifiedSituation);
+                canvas = command.draw(canvas);
             }
         }
         return modifiedSituation;
@@ -28,7 +29,8 @@ public class LogoRepeatCommand implements LogoCommandInterface {
 
     @Override
     public Canvas draw(Canvas canvas) {
-        //rysuje sie
+        this.canvas=canvas;
         return canvas;
     }
+
 }

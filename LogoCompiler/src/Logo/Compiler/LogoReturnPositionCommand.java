@@ -11,18 +11,33 @@ public class LogoReturnPositionCommand implements LogoCommandInterface {
     }
 
     @Override
-    public TurtleSituation calculateSituation(TurtleSituation currentSituation) { modifiedSituation = currentSituation;return null; }
+    public TurtleSituation calculateSituation(TurtleSituation currentSituation) {
+        modifiedSituation = currentSituation;
+        switch(positionToReturn){
+            case POS:
+                modifiedSituation.info += " Positon ->  x: " + modifiedSituation.position.x + "   y: " + modifiedSituation.position.y+"\n";
+                break;
+            case XCOR:
+                modifiedSituation.info += " Positon x: " + modifiedSituation.position.x + "\n" ;
+                break;
+            case YCOR:
+                modifiedSituation.info += " Positon y: " + modifiedSituation.position.y + "\n";
+                break;
+            case HEADING:
+                modifiedSituation.info += " Angle : " + modifiedSituation.angle + "\n";
+                break;
+            case SHOWNP:
+                modifiedSituation.info += " Icon's visible : " + modifiedSituation.turtleShowed+"\n";
+                break;
+            default:
+                modifiedSituation.info += "";
+        }
+
+        return modifiedSituation; }
 
     @Override
     public Canvas draw(Canvas canvas) {
-        if(positionToReturn == Token.POS){
-            System.out.println(modifiedSituation.position);
-        }else if(positionToReturn == Token.HEADING){
-            System.out.println(modifiedSituation.angle);
-        }else if(positionToReturn == Token.SHOWNP){
-            System.out.println(modifiedSituation.turtleShowed);
-        }
-
         return canvas;
     }
+
 }

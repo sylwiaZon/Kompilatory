@@ -45,7 +45,6 @@ public class Scanner {
         reserved.put("ARC", Token.ARC);
         reserved.put("SETPOS", Token.SETPOS);
         reserved.put("TOWARDS", Token.TOWARDS);
-        reserved.put("FOREVER", Token.FOREVER);
         reserved.put("SETICON", Token.SETICON);
 
         reserved.put("IF", Token.IF);

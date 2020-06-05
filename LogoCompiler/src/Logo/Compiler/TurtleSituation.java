@@ -12,6 +12,8 @@ public class TurtleSituation {
     public boolean penDown;
     public Color backgroundColor;
     public int icon;
+    public String info;
+
 
     public TurtleSituation(int angle, int turnAngle, int x, int y, boolean turtle, boolean pen) {
         this.angle = angle;
@@ -34,6 +36,7 @@ public class TurtleSituation {
         penDown = ts.penDown;
         backgroundColor = ts.backgroundColor; //białe
         icon = ts.icon;
+        info = ts.info;
     }
 
     public static class Position{
@@ -55,6 +58,7 @@ public class TurtleSituation {
         penDown = true;
         backgroundColor = Color.WHITE; //białe
         icon = 0;
+        info ="";
     }
     public void centerTurtle() {
         angle = 0;

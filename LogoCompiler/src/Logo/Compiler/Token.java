@@ -36,7 +36,6 @@ public enum Token {
     ARC,
     SETPOS,
     TOWARDS,
-    FOREVER,
     IF,
     WHILE,
     EQUAL,

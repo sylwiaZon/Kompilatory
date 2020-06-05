@@ -25,6 +25,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+import javax.swing.*;
+
 import static javafx.scene.paint.Color.*;
 
 
@@ -54,15 +56,16 @@ public class Controller implements Initializable {
             imageView.setFitWidth(40);
             //Setting the position of the image
             imageView.setRotate(situation.angle);
+
             imageView.setX(situation.position.x-20);
             imageView.setY(situation.position.y-20);
-
             mainPane.getChildren().add(imageView);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-        commands.clear();
+        commands.setText(situation.info);
+        situation.info="";
     }
 
     private void setColor(Color color){
@@ -132,6 +135,6 @@ public class Controller implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         situation = new TurtleSituation();
         commands.setText("home");
-        this.draw(new ActionEvent());
+       this.draw(new ActionEvent());
     }
 }

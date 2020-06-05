@@ -50,7 +50,6 @@ public class Parser {
                 case ARC:
                 case SETPOS:
                 case TOWARDS:
-                case FOREVER:
                 case IF:
                 case WHILE:
                 case EQUAL:
@@ -229,12 +228,6 @@ public class Parser {
                 Match(Token.LBRACKET);
                 Match(Token.NUMBER);
                 Match(Token.NUMBER);
-                Match(Token.RBRACKET);
-                break;
-            case FOREVER:
-                Match(nextToken);
-                Match(Token.LBRACKET);
-                parseLogoSentence();
                 Match(Token.RBRACKET);
                 break;
             case IF:

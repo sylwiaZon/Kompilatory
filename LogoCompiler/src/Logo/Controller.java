@@ -25,8 +25,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-import javax.swing.*;
-
 import static javafx.scene.paint.Color.*;
 
 
@@ -49,23 +47,25 @@ public class Controller implements Initializable {
             if(mainPane.getChildren().size()>2){
                 mainPane.getChildren().remove(mainPane.getChildren().size()-1);
             }
-            Image img = new Image(setImage(situation.icon));
-            setColor(situation.backgroundColor);
-            ImageView imageView = new ImageView(img);
-            imageView.setFitHeight(40);
-            imageView.setFitWidth(40);
-            //Setting the position of the image
-            imageView.setRotate(situation.angle);
+            if(situation.position.x>0 && situation.position.x<800 && situation.position.y>0 &&situation.position.y<480){
+                Image img = new Image(setImage(situation.icon));
+                setColor(situation.backgroundColor);
+                ImageView imageView = new ImageView(img);
+                imageView.setFitHeight(40);
+                imageView.setFitWidth(40);
+                //Setting the position of the image
+                imageView.setRotate(situation.angle);
+                imageView.setX(situation.position.x-20);
+                imageView.setY(situation.position.y-20);
 
-            imageView.setX(situation.position.x-20);
-            imageView.setY(situation.position.y-20);
-            mainPane.getChildren().add(imageView);
+                mainPane.getChildren().add(imageView);
+            }
+
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-        commands.setText(situation.info);
-        situation.info="";
+        commands.clear();
     }
 
     private void setColor(Color color){
@@ -135,6 +135,6 @@ public class Controller implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         situation = new TurtleSituation();
         commands.setText("home");
-       this.draw(new ActionEvent());
+        this.draw(new ActionEvent());
     }
 }

@@ -27,10 +27,6 @@ public class Scanner {
         reserved.put("HIDETURTLE", Token.HIDETURTLE);
         reserved.put("CLEAN", Token.CLEAN);
         reserved.put("CLEARSCREEN", Token.CLEARSCREEN);
-        reserved.put("WRAP", Token.WRAP);
-        reserved.put("WINDOW", Token.WINDOW);
-        reserved.put("PENCE", Token.PENCE);
-        reserved.put("FILL", Token.FILL);
         reserved.put("SHOWNP", Token.SHOWNP);
         reserved.put("PENDOWN", Token.PENDOWN);
         reserved.put("PENUP", Token.PENUP);
@@ -47,7 +43,6 @@ public class Scanner {
         reserved.put("ARC", Token.ARC);
         reserved.put("SETPOS", Token.SETPOS);
         reserved.put("TOWARDS", Token.TOWARDS);
-        reserved.put("FILLED", Token.FILLED);
         reserved.put("FOREVER", Token.FOREVER);
 
         reserved.put("IF", Token.IF);

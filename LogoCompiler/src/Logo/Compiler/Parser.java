@@ -234,6 +234,7 @@ public class Parser {
             case WHILE:
                 Match(nextToken);
                 Match(Token.NUMBER);
+                numberRecord = new NumberRecord(nextToken, scanner.scanBuffer);
                 nextToken = scanner.scan();
                 switch (nextToken) {
                     case EQUAL:
@@ -242,9 +243,15 @@ public class Parser {
                     case LESS:
                     case LESSEQ:
                         Match(Token.NUMBER);
+                        numberRecord2 = new NumberRecord(nextToken, scanner.scanBuffer);
                         Match(Token.LBRACKET);
-                        parseLogoSentence();
+                        while(true) {
+                            result = parseLogoSentence();
+                            if(rightBracketFound) break;
+                            commandsToRepeat.add(result);
+                        }
                         Match(Token.RBRACKET);
+                        result = new LogoIfCommand(numberRecord,numberRecord2,nextToken,commandsToRepeat);
                         break;
                     default:
                         SyntaxError(String.format("Expected one of: EQUAL, GREATER, GREATEREQ, LESS or LESSEQ but found %s",
